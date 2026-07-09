@@ -1,0 +1,147 @@
+<customrecordtype scriptid="customrecord_accrual_rate">
+  <recordname>Accrual Rate</recordname>
+  <accesstype>CUSTRECORDENTRIES</accesstype>
+  <allowattachments>T</allowattachments>
+  <allowinlineediting>T</allowinlineediting>
+  <allowquickadd>T</allowquickadd>
+  <allowquicksearch>T</allowquicksearch>
+  <enabledle>T</enabledle>
+  <includename>T</includename>
+  <isinactive>F</isinactive>
+  <iconbuiltin>T</iconbuiltin>
+  <showid>T</showid>
+  <shownotes>T</shownotes>
+  <customrecordcustomfields>
+    <customrecordcustomfield scriptid="custrecord_art_rule">
+      <label>Accrual Rule</label>
+      <fieldtype>SELECT</fieldtype>
+      <selectrecordtype>[scriptid=customrecord_accrual_rule]</selectrecordtype>
+      <isparent>T</isparent>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>T</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_art_eff_start">
+      <label>Effective Start Date</label>
+      <fieldtype>DATE</fieldtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_art_eff_end">
+      <label>Effective End Date</label>
+      <fieldtype>DATE</fieldtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_art_location">
+      <label>Location</label>
+      <fieldtype>SELECT</fieldtype>
+      <selectrecordtype>-103</selectrecordtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_art_item">
+      <label>Item / Item Group</label>
+      <fieldtype>SELECT</fieldtype>
+      <selectrecordtype>-10</selectrecordtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_art_rate">
+      <label>Rate</label>
+      <fieldtype>FLOAT</fieldtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>T</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_art_uom">
+      <label>Unit of Measure</label>
+      <fieldtype>FREEFORMTEXT</fieldtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_art_vendor">
+      <label>Vendor</label>
+      <fieldtype>SELECT</fieldtype>
+      <selectrecordtype>-3</selectrecordtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_art_notes">
+      <label>Notes</label>
+      <fieldtype>TEXTAREA</fieldtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+  </customrecordcustomfields>
+</customrecordtype>

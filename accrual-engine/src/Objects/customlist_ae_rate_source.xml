@@ -1,0 +1,13 @@
+<customlist scriptid="customlist_ae_rate_source">
+  <name>AE Rate Source</name>
+  <description>Values are engine tokens read via getText(); do not rename.</description>
+  <isinactive>F</isinactive>
+  <customvalues>
+      <customvalue scriptid="val_rule">
+        <value>rule</value>
+      </customvalue>
+      <customvalue scriptid="val_rate_table">
+        <value>rate_table</value>
+      </customvalue>
+  </customvalues>
+</customlist>

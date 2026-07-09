@@ -1,0 +1,47 @@
+<mapreducescript scriptid="customscript_ae_schedule_gen_mr">
+  <name>AE Schedule Generator</name>
+  <scriptfile>[/SuiteScripts/AccrualEngine/ae_schedule_gen_mr.js]</scriptfile>
+  <notifyadmins>T</notifyadmins>
+  <notifyowner>T</notifyowner>
+  <scriptcustomfields>
+    <scriptcustomfield scriptid="custscript_ae_gen_asof">
+      <label>As-Of Date</label>
+      <fieldtype>DATE</fieldtype>
+      <accesslevel>2</accesslevel>
+      <displaytype>NORMAL</displaytype>
+      <ismandatory>F</ismandatory>
+      <storevalue>T</storevalue>
+      <description>Any date inside the target period. Defaults to today.</description>
+    </scriptcustomfield>
+    <scriptcustomfield scriptid="custscript_ae_gen_frequency">
+      <label>Frequency Filter</label>
+      <fieldtype>FREEFORMTEXT</fieldtype>
+      <accesslevel>2</accesslevel>
+      <displaytype>NORMAL</displaytype>
+      <ismandatory>F</ismandatory>
+      <storevalue>T</storevalue>
+      <description>Optional: monthly, quarterly or annual to limit which rules run.</description>
+    </scriptcustomfield>
+    <scriptcustomfield scriptid="custscript_ae_gen_autocalc">
+      <label>Auto-Calculate</label>
+      <fieldtype>CHECKBOX</fieldtype>
+      <accesslevel>2</accesslevel>
+      <displaytype>NORMAL</displaytype>
+      <ismandatory>F</ismandatory>
+      <setdefaultchecked>T</setdefaultchecked>
+      <storevalue>T</storevalue>
+      <description>If checked, run the calc engine on each new schedule.</description>
+    </scriptcustomfield>
+  </scriptcustomfields>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_ae_schedule_gen_mr">
+      <title>AE Schedule Generator</title>
+      <status>NOTSCHEDULED</status>
+      <isdeployed>T</isdeployed>
+      <loglevel>AUDIT</loglevel>
+      <runasrole>ADMINISTRATOR</runasrole>
+      <buffersize>1</buffersize>
+      <concurrencylimit>1</concurrencylimit>
+    </scriptdeployment>
+  </scriptdeployments>
+</mapreducescript>

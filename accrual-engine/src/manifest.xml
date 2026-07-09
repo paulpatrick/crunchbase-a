@@ -1,0 +1,14 @@
+<manifest projecttype="ACCOUNTCUSTOMIZATION">
+  <projectname>Accrual Engine</projectname>
+  <frameworkversion>1.0</frameworkversion>
+  <dependencies>
+    <features>
+      <feature required="true">CUSTOMRECORDS</feature>
+      <feature required="true">SERVERSIDESCRIPTING</feature>
+      <feature required="true">CLIENTSIDESCRIPTING</feature>
+      <feature required="false">CUSTOMTRANSACTIONS</feature>
+      <feature required="false">SUBSIDIARIES</feature>
+      <feature required="false">LOCATIONS</feature>
+    </features>
+  </dependencies>
+</manifest>

@@ -1,0 +1,19 @@
+<customlist scriptid="customlist_ae_rev_date_rule">
+  <name>AE Reversal Date Rule</name>
+  <description>Values are engine tokens read via getText(); do not rename.</description>
+  <isinactive>F</isinactive>
+  <customvalues>
+      <customvalue scriptid="val_first_day_next_month">
+        <value>first_day_next_month</value>
+      </customvalue>
+      <customvalue scriptid="val_last_day_next_month">
+        <value>last_day_next_month</value>
+      </customvalue>
+      <customvalue scriptid="val_specific_date">
+        <value>specific_date</value>
+      </customvalue>
+      <customvalue scriptid="val_period_end">
+        <value>period_end</value>
+      </customvalue>
+  </customvalues>
+</customlist>

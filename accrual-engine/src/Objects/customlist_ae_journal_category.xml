@@ -1,0 +1,31 @@
+<customlist scriptid="customlist_ae_journal_category">
+  <name>AE Journal Category</name>
+  <description>Journal categories for accrual transactions. Seed with the categories your GL reporting expects; kept at header level so one accrual == one category.</description>
+  <isinactive>F</isinactive>
+  <customvalues>
+    <customvalue scriptid="val_royalty">
+      <value>Royalty</value>
+    </customvalue>
+    <customvalue scriptid="val_freight">
+      <value>Freight / Shipping</value>
+    </customvalue>
+    <customvalue scriptid="val_hauling">
+      <value>Hauling</value>
+    </customvalue>
+    <customvalue scriptid="val_access_fee">
+      <value>Access Fee</value>
+    </customvalue>
+    <customvalue scriptid="val_bonus">
+      <value>Bonus</value>
+    </customvalue>
+    <customvalue scriptid="val_insurance">
+      <value>Insurance</value>
+    </customvalue>
+    <customvalue scriptid="val_payroll">
+      <value>Payroll</value>
+    </customvalue>
+    <customvalue scriptid="val_other">
+      <value>Other</value>
+    </customvalue>
+  </customvalues>
+</customlist>

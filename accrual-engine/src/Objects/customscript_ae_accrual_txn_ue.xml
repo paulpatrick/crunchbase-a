@@ -1,0 +1,26 @@
+<usereventscript scriptid="customscript_ae_accrual_txn_ue">
+  <name>AE Accrual Transaction Events</name>
+  <scriptfile>[/SuiteScripts/AccrualEngine/ae_accrual_txn_ue.js]</scriptfile>
+  <notifyadmins>F</notifyadmins>
+  <notifyowner>T</notifyowner>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_ae_txn_ue_accrual">
+      <title>Bills - Accruals</title>
+      <recordtype>[scriptid=customtransaction_bills_accruals]</recordtype>
+      <status>RELEASED</status>
+      <isdeployed>T</isdeployed>
+      <loglevel>AUDIT</loglevel>
+      <runasrole>ADMINISTRATOR</runasrole>
+      <allroles>T</allroles>
+    </scriptdeployment>
+    <scriptdeployment scriptid="customdeploy_ae_txn_ue_reversal">
+      <title>Bills - Accruals - Reversal</title>
+      <recordtype>[scriptid=customtransaction_bills_accruals_rev]</recordtype>
+      <status>RELEASED</status>
+      <isdeployed>T</isdeployed>
+      <loglevel>AUDIT</loglevel>
+      <runasrole>ADMINISTRATOR</runasrole>
+      <allroles>T</allroles>
+    </scriptdeployment>
+  </scriptdeployments>
+</usereventscript>

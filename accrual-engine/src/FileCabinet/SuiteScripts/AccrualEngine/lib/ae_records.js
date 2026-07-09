@@ -25,6 +25,19 @@ define([
      * Rules
      * ------------------------------------------------------------------ */
 
+    /**
+     * Read a list-backed enum field as its token. The custom list values are
+     * named with the engine tokens (e.g. "fixed_amount"), so getText() returns
+     * the token. Falls back to getValue() when the field is stored as plain
+     * text, so the engine works whether the field is a list or free-form text.
+     */
+    function enumToken(rec, fieldId) {
+        var t = rec.getText(fieldId);
+        if (t !== null && t !== undefined && t !== '') return String(t).trim();
+        var v = rec.getValue(fieldId);
+        return (v === null || v === undefined) ? '' : String(v).trim();
+    }
+
     /** Load a rule record and flatten it into a plain object. */
     function getRule(ruleId) {
         var rec = record.load({ type: C.RECORD.RULE, id: ruleId });
@@ -39,23 +52,26 @@ define([
             journalCategory: rec.getValue(RF.JOURNAL_CATEGORY),
             accrualAccount: rec.getValue(RF.ACCRUAL_ACCOUNT),
             expenseAccount: rec.getValue(RF.EXPENSE_ACCOUNT),
-            calcType: rec.getValue(RF.CALC_TYPE),
-            qtySourceType: rec.getValue(RF.QTY_SOURCE_TYPE),
+            // Enum fields the engine compares to token constants are backed by
+            // custom lists whose value *names* are the tokens, so we read the
+            // text (not the numeric internal id).
+            calcType: enumToken(rec, RF.CALC_TYPE),
+            qtySourceType: enumToken(rec, RF.QTY_SOURCE_TYPE),
             savedSearch: rec.getValue(RF.SAVED_SEARCH),
             manualQty: Number(rec.getValue(RF.MANUAL_QTY) || 0),
             fixedAmount: Number(rec.getValue(RF.FIXED_AMOUNT) || 0),
             rate: Number(rec.getValue(RF.RATE) || 0),
-            rateSource: rec.getValue(RF.RATE_SOURCE),
+            rateSource: enumToken(rec, RF.RATE_SOURCE),
             percentage: Number(rec.getValue(RF.PERCENTAGE) || 0),
             percentBasis: Number(rec.getValue(RF.PERCENT_BASIS) || 0),
             formula: rec.getValue(RF.FORMULA),
             pluginScript: rec.getValue(RF.PLUGIN_SCRIPT),
-            frequency: rec.getValue(RF.FREQUENCY),
+            frequency: enumToken(rec, RF.FREQUENCY),
             startDate: rec.getValue(RF.START_DATE),
             endDate: rec.getValue(RF.END_DATE),
-            reversalMethod: rec.getValue(RF.REVERSAL_METHOD),
-            reversalDateRule: rec.getValue(RF.REVERSAL_DATE_RULE),
-            billBehavior: rec.getValue(RF.BILL_BEHAVIOR),
+            reversalMethod: enumToken(rec, RF.REVERSAL_METHOD),
+            reversalDateRule: enumToken(rec, RF.REVERSAL_DATE_RULE),
+            billBehavior: enumToken(rec, RF.BILL_BEHAVIOR),
             lookbackMonths: Number(rec.getValue(RF.LOOKBACK_MONTHS) || 6),
             memoTemplate: rec.getValue(RF.MEMO_TEMPLATE),
             owner: rec.getValue(RF.OWNER),

@@ -1,0 +1,18 @@
+<transactionbodycustomfield scriptid="custbody_ae_original_accrual">
+  <label>Original Accrual Transaction</label>
+  <fieldtype>SELECT</fieldtype>
+  <selectrecordtype>-30</selectrecordtype>
+  <selectorder>DEFAULT</selectorder>
+  <accesslevel>2</accesslevel>
+  <checkspelling>F</checkspelling>
+  <displaytype>NORMAL</displaytype>
+  <isformula>F</isformula>
+  <ismandatory>F</ismandatory>
+  <isparent>F</isparent>
+  <showinlist>F</showinlist>
+  <storevalue>T</storevalue>
+  <appliestopurchase>T</appliestopurchase>
+  <appliestosale>F</appliestosale>
+  <bodypurchase>T</bodypurchase>
+  <subtab></subtab>
+</transactionbodycustomfield>

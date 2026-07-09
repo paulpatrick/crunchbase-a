@@ -1,0 +1,9 @@
+<deploy>
+  <files>
+    <path>~/FileCabinet/SuiteScripts/AccrualEngine/*</path>
+    <path>~/FileCabinet/SuiteScripts/AccrualEngine/lib/*</path>
+  </files>
+  <objects>
+    <path>~/Objects/*</path>
+  </objects>
+</deploy>

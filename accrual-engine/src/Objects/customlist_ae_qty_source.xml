@@ -1,0 +1,19 @@
+<customlist scriptid="customlist_ae_qty_source">
+  <name>AE Quantity Source</name>
+  <description>Values are engine tokens read via getText(); do not rename.</description>
+  <isinactive>F</isinactive>
+  <customvalues>
+      <customvalue scriptid="val_manual">
+        <value>manual</value>
+      </customvalue>
+      <customvalue scriptid="val_saved_search">
+        <value>saved_search</value>
+      </customvalue>
+      <customvalue scriptid="val_hours_import">
+        <value>hours_import</value>
+      </customvalue>
+      <customvalue scriptid="val_none">
+        <value>none</value>
+      </customvalue>
+  </customvalues>
+</customlist>

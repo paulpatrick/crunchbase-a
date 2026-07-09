@@ -1,0 +1,19 @@
+<customlist scriptid="customlist_ae_bill_behavior">
+  <name>AE Bill Behavior</name>
+  <description>Values are engine tokens read via getText(); do not rename.</description>
+  <isinactive>F</isinactive>
+  <customvalues>
+      <customvalue scriptid="val_match_and_reverse">
+        <value>match_and_reverse</value>
+      </customvalue>
+      <customvalue scriptid="val_match_only">
+        <value>match_only</value>
+      </customvalue>
+      <customvalue scriptid="val_accumulate">
+        <value>accumulate</value>
+      </customvalue>
+      <customvalue scriptid="val_convert">
+        <value>convert</value>
+      </customvalue>
+  </customvalues>
+</customlist>

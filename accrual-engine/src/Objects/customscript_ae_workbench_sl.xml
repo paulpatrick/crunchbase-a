@@ -1,0 +1,16 @@
+<suitelet scriptid="customscript_ae_workbench_sl">
+  <name>Accrual Workbench</name>
+  <scriptfile>[/SuiteScripts/AccrualEngine/ae_workbench_sl.js]</scriptfile>
+  <notifyadmins>F</notifyadmins>
+  <notifyowner>T</notifyowner>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_ae_workbench_sl">
+      <title>Accrual Workbench</title>
+      <status>RELEASED</status>
+      <isdeployed>T</isdeployed>
+      <loglevel>DEBUG</loglevel>
+      <runasrole>ADMINISTRATOR</runasrole>
+      <allroles>T</allroles>
+    </scriptdeployment>
+  </scriptdeployments>
+</suitelet>

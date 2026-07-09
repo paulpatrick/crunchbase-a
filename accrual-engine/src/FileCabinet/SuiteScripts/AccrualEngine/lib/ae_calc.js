@@ -140,7 +140,7 @@ define([
      * Formula calc. The rule stores a whitelisted arithmetic expression using
      * tokens {qty} {rate} {fixed} {pct} {basis}. We substitute numeric context
      * and evaluate with a guarded parser (no access to globals). Intentionally
-     * limited to +-*/() and numbers.
+     * limited to the four arithmetic operators, parentheses and numbers.
      */
     function calcFormula(rule, ctx) {
         var tokens = {

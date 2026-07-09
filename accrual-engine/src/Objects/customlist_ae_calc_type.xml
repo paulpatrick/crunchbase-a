@@ -1,0 +1,28 @@
+<customlist scriptid="customlist_ae_calc_type">
+  <name>AE Calculation Type</name>
+  <description>Values are engine tokens read via getText(); do not rename.</description>
+  <isinactive>F</isinactive>
+  <customvalues>
+      <customvalue scriptid="val_fixed_amount">
+        <value>fixed_amount</value>
+      </customvalue>
+      <customvalue scriptid="val_manual_qty_rate">
+        <value>manual_qty_rate</value>
+      </customvalue>
+      <customvalue scriptid="val_search_qty_rate">
+        <value>search_qty_rate</value>
+      </customvalue>
+      <customvalue scriptid="val_hours_rate">
+        <value>hours_rate</value>
+      </customvalue>
+      <customvalue scriptid="val_percentage">
+        <value>percentage</value>
+      </customvalue>
+      <customvalue scriptid="val_formula">
+        <value>formula</value>
+      </customvalue>
+      <customvalue scriptid="val_plugin">
+        <value>plugin</value>
+      </customvalue>
+  </customvalues>
+</customlist>

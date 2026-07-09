@@ -1,0 +1,17 @@
+<transactionbodycustomfield scriptid="custbody_ae_reversal_date">
+  <label>Reversal Date</label>
+  <fieldtype>DATE</fieldtype>
+  <selectorder>DEFAULT</selectorder>
+  <accesslevel>2</accesslevel>
+  <checkspelling>F</checkspelling>
+  <displaytype>NORMAL</displaytype>
+  <isformula>F</isformula>
+  <ismandatory>F</ismandatory>
+  <isparent>F</isparent>
+  <showinlist>F</showinlist>
+  <storevalue>T</storevalue>
+  <appliestopurchase>T</appliestopurchase>
+  <appliestosale>F</appliestosale>
+  <bodypurchase>T</bodypurchase>
+  <subtab></subtab>
+</transactionbodycustomfield>

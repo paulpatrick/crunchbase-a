@@ -1,0 +1,22 @@
+<customlist scriptid="customlist_ae_reversal_method">
+  <name>AE Reversal Method</name>
+  <description>Values are engine tokens read via getText(); do not rename.</description>
+  <isinactive>F</isinactive>
+  <customvalues>
+      <customvalue scriptid="val_next_period_first_day">
+        <value>next_period_first_day</value>
+      </customvalue>
+      <customvalue scriptid="val_on_reversal_date">
+        <value>on_reversal_date</value>
+      </customvalue>
+      <customvalue scriptid="val_on_bill_match">
+        <value>on_bill_match</value>
+      </customvalue>
+      <customvalue scriptid="val_manual">
+        <value>manual</value>
+      </customvalue>
+      <customvalue scriptid="val_none">
+        <value>none</value>
+      </customvalue>
+  </customvalues>
+</customlist>

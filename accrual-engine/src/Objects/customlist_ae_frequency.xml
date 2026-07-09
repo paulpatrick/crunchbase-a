@@ -1,0 +1,16 @@
+<customlist scriptid="customlist_ae_frequency">
+  <name>AE Frequency</name>
+  <description>Values are engine tokens read via getText(); do not rename.</description>
+  <isinactive>F</isinactive>
+  <customvalues>
+      <customvalue scriptid="val_monthly">
+        <value>monthly</value>
+      </customvalue>
+      <customvalue scriptid="val_quarterly">
+        <value>quarterly</value>
+      </customvalue>
+      <customvalue scriptid="val_annual">
+        <value>annual</value>
+      </customvalue>
+  </customvalues>
+</customlist>

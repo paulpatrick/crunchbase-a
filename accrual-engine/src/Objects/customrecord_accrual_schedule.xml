@@ -1,0 +1,389 @@
+<customrecordtype scriptid="customrecord_accrual_schedule">
+  <recordname>Accrual Schedule</recordname>
+  <accesstype>CUSTRECORDENTRIES</accesstype>
+  <allowattachments>T</allowattachments>
+  <allowinlineediting>T</allowinlineediting>
+  <allowquickadd>T</allowquickadd>
+  <allowquicksearch>T</allowquicksearch>
+  <enabledle>T</enabledle>
+  <includename>T</includename>
+  <isinactive>F</isinactive>
+  <iconbuiltin>T</iconbuiltin>
+  <showid>T</showid>
+  <shownotes>T</shownotes>
+  <customrecordcustomfields>
+    <customrecordcustomfield scriptid="custrecord_as_rule">
+      <label>Accrual Rule</label>
+      <fieldtype>SELECT</fieldtype>
+      <selectrecordtype>[scriptid=customrecord_accrual_rule]</selectrecordtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>T</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_as_period">
+      <label>Accounting Period</label>
+      <fieldtype>SELECT</fieldtype>
+      <selectrecordtype>-105</selectrecordtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_as_period_start">
+      <label>Period Start Date</label>
+      <fieldtype>DATE</fieldtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_as_period_end">
+      <label>Period End Date</label>
+      <fieldtype>DATE</fieldtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_as_status">
+      <label>Status</label>
+      <fieldtype>FREEFORMTEXT</fieldtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_as_calc_qty">
+      <label>Calculated Quantity</label>
+      <fieldtype>FLOAT</fieldtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_as_calc_rate">
+      <label>Calculated Rate</label>
+      <fieldtype>FLOAT</fieldtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_as_calc_amount">
+      <label>Calculated Amount</label>
+      <fieldtype>CURRENCY</fieldtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_as_override_amount">
+      <label>Override Amount</label>
+      <fieldtype>CURRENCY</fieldtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_as_override_qty">
+      <label>Override Quantity</label>
+      <fieldtype>FLOAT</fieldtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_as_override_reason">
+      <label>Override Reason</label>
+      <fieldtype>TEXTAREA</fieldtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_as_accrual_txn">
+      <label>Accrual Transaction</label>
+      <fieldtype>SELECT</fieldtype>
+      <selectrecordtype>-30</selectrecordtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_as_reversal_txn">
+      <label>Reversal Transaction</label>
+      <fieldtype>SELECT</fieldtype>
+      <selectrecordtype>-30</selectrecordtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_as_matched_bill">
+      <label>Matched Vendor Bill</label>
+      <fieldtype>SELECT</fieldtype>
+      <selectrecordtype>-30</selectrecordtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_as_converted_bill">
+      <label>Converted Vendor Bill</label>
+      <fieldtype>SELECT</fieldtype>
+      <selectrecordtype>-30</selectrecordtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_as_reversal_date">
+      <label>Reversal Date</label>
+      <fieldtype>DATE</fieldtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_as_reversal_status">
+      <label>Reversal Status</label>
+      <fieldtype>FREEFORMTEXT</fieldtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_as_variance_amount">
+      <label>Variance Amount</label>
+      <fieldtype>CURRENCY</fieldtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_as_matched_amount">
+      <label>Matched Amount</label>
+      <fieldtype>CURRENCY</fieldtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_as_created_by">
+      <label>Created By</label>
+      <fieldtype>SELECT</fieldtype>
+      <selectrecordtype>-4</selectrecordtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_as_last_calc_date">
+      <label>Last Calculated Date</label>
+      <fieldtype>DATETIMETZ</fieldtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_as_last_posted_date">
+      <label>Last Posted Date</label>
+      <fieldtype>DATETIMETZ</fieldtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_as_exception_reason">
+      <label>Exception Reason</label>
+      <fieldtype>TEXTAREA</fieldtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_as_prev_schedule">
+      <label>Previous Schedule</label>
+      <fieldtype>SELECT</fieldtype>
+      <selectrecordtype>[scriptid=customrecord_accrual_schedule]</selectrecordtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_as_next_schedule">
+      <label>Next Schedule</label>
+      <fieldtype>SELECT</fieldtype>
+      <selectrecordtype>[scriptid=customrecord_accrual_schedule]</selectrecordtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+    <customrecordcustomfield scriptid="custrecord_as_notes">
+      <label>Notes</label>
+      <fieldtype>TEXTAREA</fieldtype>
+      <accesslevel>2</accesslevel>
+      <checkspelling>F</checkspelling>
+      <defaultchecked>F</defaultchecked>
+      <displaytype>NORMAL</displaytype>
+      <isformula>F</isformula>
+      <ismandatory>F</ismandatory>
+      <ismatrix>F</ismatrix>
+      <searchlevel>2</searchlevel>
+      <showinlist>F</showinlist>
+      <storevalue>T</storevalue>
+    </customrecordcustomfield>
+  </customrecordcustomfields>
+</customrecordtype>

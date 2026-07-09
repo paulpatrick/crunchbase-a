@@ -1,0 +1,13 @@
+{
+  "name": "accrual-engine",
+  "version": "0.1.0",
+  "description": "NetSuite SuiteScript Accrual Engine / Accrual Workbench",
+  "private": true,
+  "scripts": {
+    "validate": "suitecloud project:validate --server",
+    "deploy": "suitecloud project:deploy"
+  },
+  "devDependencies": {
+    "@oracle/suitecloud-cli": "^2.0.0"
+  }
+}
