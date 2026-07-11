@@ -3,18 +3,6 @@
   <scriptfile>[/SuiteScripts/AccrualEngine/ae_reversal_mr.js]</scriptfile>
   <notifyadmins>T</notifyadmins>
   <notifyowner>T</notifyowner>
-  <scriptcustomfields>
-    <scriptcustomfield scriptid="custscript_ae_rev_accrual_type">
-      <label>Accrual Custom Transaction Type</label>
-      <fieldtype>FREEFORMTEXT</fieldtype>
-      <accesslevel>2</accesslevel>
-      <displaytype>NORMAL</displaytype>
-      <ismandatory>F</ismandatory>
-      <setdefaultchecked>F</setdefaultchecked>
-      <storevalue>T</storevalue>
-      <description>Script id of the Bills - Accruals custom transaction type. Defaults to customtransaction_bills_accruals.</description>
-    </scriptcustomfield>
-  </scriptcustomfields>
   <scriptdeployments>
     <scriptdeployment scriptid="customdeploy_ae_reversal_mr">
       <title>AE Daily Reversal Engine</title>
@@ -24,7 +12,6 @@
       <runasrole>ADMINISTRATOR</runasrole>
       <buffersize>1</buffersize>
       <concurrencylimit>1</concurrencylimit>
-      <yieldafterms>60000</yieldafterms>
     </scriptdeployment>
   </scriptdeployments>
 </mapreducescript>

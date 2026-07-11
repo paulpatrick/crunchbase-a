@@ -1,11 +1,10 @@
 <customrecordtype scriptid="customrecord_accrual_rate">
   <recordname>Accrual Rate</recordname>
-  <accesstype>CUSTRECORDENTRIES</accesstype>
+  <accesstype>NONENEEDED</accesstype>
   <allowattachments>T</allowattachments>
   <allowinlineediting>T</allowinlineediting>
   <allowquickadd>T</allowquickadd>
   <allowquicksearch>T</allowquicksearch>
-  <enabledle>T</enabledle>
   <includename>T</includename>
   <isinactive>F</isinactive>
   <iconbuiltin>T</iconbuiltin>
@@ -23,7 +22,6 @@
       <displaytype>NORMAL</displaytype>
       <isformula>F</isformula>
       <ismandatory>T</ismandatory>
-      <ismatrix>F</ismatrix>
       <searchlevel>2</searchlevel>
       <showinlist>F</showinlist>
       <storevalue>T</storevalue>
@@ -37,7 +35,6 @@
       <displaytype>NORMAL</displaytype>
       <isformula>F</isformula>
       <ismandatory>F</ismandatory>
-      <ismatrix>F</ismatrix>
       <searchlevel>2</searchlevel>
       <showinlist>F</showinlist>
       <storevalue>T</storevalue>
@@ -51,7 +48,6 @@
       <displaytype>NORMAL</displaytype>
       <isformula>F</isformula>
       <ismandatory>F</ismandatory>
-      <ismatrix>F</ismatrix>
       <searchlevel>2</searchlevel>
       <showinlist>F</showinlist>
       <storevalue>T</storevalue>
@@ -66,7 +62,6 @@
       <displaytype>NORMAL</displaytype>
       <isformula>F</isformula>
       <ismandatory>F</ismandatory>
-      <ismatrix>F</ismatrix>
       <searchlevel>2</searchlevel>
       <showinlist>F</showinlist>
       <storevalue>T</storevalue>
@@ -81,7 +76,6 @@
       <displaytype>NORMAL</displaytype>
       <isformula>F</isformula>
       <ismandatory>F</ismandatory>
-      <ismatrix>F</ismatrix>
       <searchlevel>2</searchlevel>
       <showinlist>F</showinlist>
       <storevalue>T</storevalue>
@@ -95,21 +89,19 @@
       <displaytype>NORMAL</displaytype>
       <isformula>F</isformula>
       <ismandatory>T</ismandatory>
-      <ismatrix>F</ismatrix>
       <searchlevel>2</searchlevel>
       <showinlist>F</showinlist>
       <storevalue>T</storevalue>
     </customrecordcustomfield>
     <customrecordcustomfield scriptid="custrecord_art_uom">
       <label>Unit of Measure</label>
-      <fieldtype>FREEFORMTEXT</fieldtype>
+      <fieldtype>TEXTAREA</fieldtype>
       <accesslevel>2</accesslevel>
       <checkspelling>F</checkspelling>
       <defaultchecked>F</defaultchecked>
       <displaytype>NORMAL</displaytype>
       <isformula>F</isformula>
       <ismandatory>F</ismandatory>
-      <ismatrix>F</ismatrix>
       <searchlevel>2</searchlevel>
       <showinlist>F</showinlist>
       <storevalue>T</storevalue>
@@ -124,7 +116,6 @@
       <displaytype>NORMAL</displaytype>
       <isformula>F</isformula>
       <ismandatory>F</ismandatory>
-      <ismatrix>F</ismatrix>
       <searchlevel>2</searchlevel>
       <showinlist>F</showinlist>
       <storevalue>T</storevalue>
@@ -138,7 +129,6 @@
       <displaytype>NORMAL</displaytype>
       <isformula>F</isformula>
       <ismandatory>F</ismandatory>
-      <ismatrix>F</ismatrix>
       <searchlevel>2</searchlevel>
       <showinlist>F</showinlist>
       <storevalue>T</storevalue>

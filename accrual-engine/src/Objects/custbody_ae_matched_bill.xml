@@ -2,7 +2,6 @@
   <label>Matched Vendor Bill</label>
   <fieldtype>SELECT</fieldtype>
   <selectrecordtype>-30</selectrecordtype>
-  <selectorder>DEFAULT</selectorder>
   <accesslevel>2</accesslevel>
   <checkspelling>F</checkspelling>
   <displaytype>NORMAL</displaytype>
@@ -11,8 +10,5 @@
   <isparent>F</isparent>
   <showinlist>F</showinlist>
   <storevalue>T</storevalue>
-  <appliestopurchase>T</appliestopurchase>
-  <appliestosale>F</appliestosale>
   <bodypurchase>T</bodypurchase>
-  <subtab></subtab>
 </transactionbodycustomfield>

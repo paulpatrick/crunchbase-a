@@ -50,8 +50,11 @@ define([
 
         return search.create({
             type: accrualSearchType,
+            // custbody_ae_reversal_status is a long-text field, so it is
+            // matched with 'contains' rather than 'is'. The reversal_txn empty
+            // check is what actually guarantees we never double-reverse.
             filters: [
-                [TF.REVERSAL_STATUS, 'is', C.REVERSAL_STATUS.PENDING],
+                [TF.REVERSAL_STATUS, 'contains', C.REVERSAL_STATUS.PENDING],
                 'AND',
                 [TF.REVERSAL_DATE, 'onorbefore', todayStr],
                 'AND',

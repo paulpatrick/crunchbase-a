@@ -13,22 +13,12 @@
       <storevalue>T</storevalue>
       <description>Any date inside the target period. Defaults to today.</description>
     </scriptcustomfield>
-    <scriptcustomfield scriptid="custscript_ae_gen_frequency">
-      <label>Frequency Filter</label>
-      <fieldtype>FREEFORMTEXT</fieldtype>
-      <accesslevel>2</accesslevel>
-      <displaytype>NORMAL</displaytype>
-      <ismandatory>F</ismandatory>
-      <storevalue>T</storevalue>
-      <description>Optional: monthly, quarterly or annual to limit which rules run.</description>
-    </scriptcustomfield>
     <scriptcustomfield scriptid="custscript_ae_gen_autocalc">
       <label>Auto-Calculate</label>
       <fieldtype>CHECKBOX</fieldtype>
       <accesslevel>2</accesslevel>
       <displaytype>NORMAL</displaytype>
       <ismandatory>F</ismandatory>
-      <setdefaultchecked>T</setdefaultchecked>
       <storevalue>T</storevalue>
       <description>If checked, run the calc engine on each new schedule.</description>
     </scriptcustomfield>
