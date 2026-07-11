@@ -26,13 +26,14 @@ define([
     'N/ui/serverWidget',
     'N/redirect',
     'N/url',
+    'N/query',
     'N/runtime',
     'N/log',
     './lib/ae_constants',
     './lib/ae_util',
     './lib/ae_workbench_data',
     './lib/ae_actions'
-], function (ui, redirect, url, runtime, log, C, util, data, actions) {
+], function (ui, redirect, url, query, runtime, log, C, util, data, actions) {
     'use strict';
 
     var SCRIPT_ID = 'customscript_ae_workbench_sl';
@@ -151,7 +152,11 @@ define([
      * 2. ACCRUAL RULES
      * ================================================================== */
     function renderRules(form, context) {
-        form.addButton({ id: 'custpage_newrule', label: 'New Rule', functionName: 'aeNewRule()' });
+        var newUrl = newRecordUrl(C.RECORD.RULE);
+        if (newUrl) {
+            form.addButton({ id: 'custpage_newrule', label: 'New Rule',
+                functionName: 'window.open("' + newUrl + '","_blank")' });
+        }
         var rows = data.ruleList(true);
         var list = form.addSublist({ id: 'custpage_rules', type: ui.SublistType.LIST, label: 'Active Rules' });
         list.addField({ id: 'name', type: ui.FieldType.TEXT, label: 'Rule' });
@@ -507,6 +512,29 @@ define([
     function recordLink(type, id, label) {
         var href = url.resolveRecord({ recordType: type, recordId: id, isEditMode: false });
         return '<a href="' + href + '" target="_blank">' + escapeHtml(label) + '</a>';
+    }
+    /**
+     * Build the "new custom record" URL. NetSuite's custrecordentry.nl needs the
+     * record type's numeric internal id (not its script id), which we resolve
+     * once via SuiteQL. Returns null if it can't be resolved so the caller can
+     * simply omit the button rather than render a broken link.
+     */
+    var _rectypeCache = {};
+    function newRecordUrl(scriptId) {
+        try {
+            if (!_rectypeCache[scriptId]) {
+                var rows = query.runSuiteQL({
+                    query: 'SELECT internalid FROM customrecordtype WHERE scriptid = ?',
+                    params: [scriptId]
+                }).asMappedResults();
+                if (!rows.length) return null;
+                _rectypeCache[scriptId] = rows[0].internalid;
+            }
+            return '/app/common/custom/custrecordentry.nl?rectype=' + _rectypeCache[scriptId];
+        } catch (e) {
+            log.error({ title: 'newRecordUrl(' + scriptId + ')', details: e });
+            return null;
+        }
     }
     function recordTxnLink(id, label) {
         var href = '/app/accounting/transactions/transaction.nl?id=' + id;
