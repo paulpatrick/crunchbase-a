@@ -1,0 +1,16 @@
+<suitelet scriptid="customscript_ae_app_sl">
+  <name>Accrual Workbench (App)</name>
+  <scriptfile>[/SuiteScripts/AccrualEngine/ae_app_sl.js]</scriptfile>
+  <notifyadmins>F</notifyadmins>
+  <notifyowner>T</notifyowner>
+  <scriptdeployments>
+    <scriptdeployment scriptid="customdeploy_ae_app_sl">
+      <title>Accrual Workbench (App)</title>
+      <status>RELEASED</status>
+      <isdeployed>T</isdeployed>
+      <loglevel>DEBUG</loglevel>
+      <runasrole>ADMINISTRATOR</runasrole>
+      <allroles>T</allroles>
+    </scriptdeployment>
+  </scriptdeployments>
+</suitelet>
